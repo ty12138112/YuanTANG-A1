@@ -1,15 +1,26 @@
-//TIP 要<b>运行</b>代码，请按 <shortcut actionId="Run"/> 或
-// 点击装订区域中的 <icon src="AllIcons.Actions.Execute"/> 图标。
 public class Main {
     public static void main(String[] args) {
-        //TIP 当文本光标位于高亮显示的文本处时按 <shortcut actionId="ShowIntentionActions"/>
-        // 查看 IntelliJ IDEA 建议如何修正。
-        System.out.printf("Hello and welcome!");
+        // Part 3 – Using classes and objects
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP 按 <shortcut actionId="Debug"/> 开始调试代码。我们已经设置了一个 <icon src="AllIcons.Debugger.Db_set_breakpoint"/> 断点
-            // 但您始终可以通过按 <shortcut actionId="ToggleLineBreakpoint"/> 添加更多断点。
-            System.out.println("i = " + i);
-        }
+        // Creating three objects of GeneralPractitioner
+        GeneralPractitioner gp1 = new GeneralPractitioner(1, "Dr. Alice", "Family Medicine", "City Health Clinic");
+        GeneralPractitioner gp2 = new GeneralPractitioner(2, "Dr. John", "Pediatrics", "Downtown Clinic");
+        GeneralPractitioner gp3 = new GeneralPractitioner(3, "Dr. Sarah", "Internal Medicine", "Suburban Clinic");
+
+        // Creating two objects of Specialist
+        Specialist specialist1 = new Specialist(4, "Dr. Bob", "Cardiology", "Heart Diseases");
+        Specialist specialist2 = new Specialist(5, "Dr. Emily", "Dermatology", "Skin Conditions");
+
+        // Printing details of all health professionals
+        gp1.printDetails();
+        System.out.println("------------------------------");
+        gp2.printDetails();
+        System.out.println("------------------------------");
+        gp3.printDetails();
+        System.out.println("------------------------------");
+        specialist1.printDetails();
+        System.out.println("------------------------------");
+        specialist2.printDetails();
+        System.out.println("------------------------------");
     }
 }
