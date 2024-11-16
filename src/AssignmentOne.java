@@ -50,7 +50,7 @@ public class AssignmentOne {
         System.out.println("------------------------------");
 
         // Cancel one of the existing appointments
-        cancelBooking(appointments, "123-456-7890"); // Cancel John Doe's appointment
+        cancelBooking(appointments, "18888888888"); // Cancel John Doe's appointment
         System.out.println("------------------------------");
 
         // Print again existing appointments to demonstrate the updated collection
@@ -95,19 +95,21 @@ public class AssignmentOne {
         // Method to cancel a booking using a patient's mobile phone
         public static void cancelBooking(ArrayList<Appointment> appointments, String mobile) {
             Iterator<Appointment> iterator = appointments.iterator();
-            boolean found = false;
+             int I1 =  appointments.size();
 
             while (iterator.hasNext()) {
                 Appointment appointment = iterator.next();
-                if (appointment.getPatient().getMobile().equals(mobile)) {
+                boolean B1 = appointment.getPatient().getMobile().equals(mobile);
+                if (B1) {
                     iterator.remove();
                     System.out.println("Appointment for " + appointment.getPatient().getName() + " has been canceled.");
-                    found = true;
+
                     break;
                 }
+
             }
 
-            if (!found) {
+            if (appointments.size()==I1) {
                 System.out.println("No appointment found for mobile number: " + mobile);
             }
     }
