@@ -4,6 +4,30 @@ public class Appointment {
     private String preferredTimeSlot;
     private HealthProfessional selectedDoctor; // Can be GeneralPractitioner or Specialist
 
+    public Patient getPatient() {
+        return patient;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
+    }
+
+    public String getPreferredTimeSlot() {
+        return preferredTimeSlot;
+    }
+
+    public void setPreferredTimeSlot(String preferredTimeSlot) {
+        this.preferredTimeSlot = preferredTimeSlot;
+    }
+
+    public HealthProfessional getSelectedDoctor() {
+        return selectedDoctor;
+    }
+
+    public void setSelectedDoctor(HealthProfessional selectedDoctor) {
+        this.selectedDoctor = selectedDoctor;
+    }
+
     // Default constructor
     public Appointment() {
         this.patient = new Patient();

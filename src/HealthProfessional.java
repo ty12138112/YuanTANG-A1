@@ -24,6 +24,10 @@
             System.out.println("Specialty: " + specialty);
         }
 
+
+        public  void printDetails(){}
+
+
         // Getters for instance variables (optional, for further use)
         public int getId() {
             return id;
